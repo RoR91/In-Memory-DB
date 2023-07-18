@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "59035803-3a2d-4e18-9663-4c46627733f5",
+		"name": "Challenge CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14651134"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GetCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7099/api/Category",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryName\": \"Xiaomi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7099/api/Category",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7099/api/Category/category:0bc70c90-d837-4a21-a1c2-609b0a2d561b",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Category",
+								"category:0bc70c90-d837-4a21-a1c2-609b0a2d561b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryId\": \"category:d5f8bc87-2449-4ee4-81c0-6f617fbaf75f\",\r\n  \"categoryName\": \"Category_1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7099/api/Category/category:d5f8bc87-2449-4ee4-81c0-6f617fbaf75f",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Category",
+								"category:d5f8bc87-2449-4ee4-81c0-6f617fbaf75f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7099/api/Category/category:e7a86b14-bd13-40fc-8ea9-1800195422e4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Category",
+								"category:e7a86b14-bd13-40fc-8ea9-1800195422e4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7099/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7099/api/Product/product:0f5d8cee-9c88-44a2-9e1a-d0a719f4e48c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Product",
+								"product:0f5d8cee-9c88-44a2-9e1a-d0a719f4e48c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Product_1\",\r\n  \"description\": \"Test\",\r\n  \"unitPrice\": 20,\r\n  \"categoryId\": \"category:0bc70c90-d837-4a21-a1c2-609b0a2d561b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7099/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"product:692bc169-380e-4217-aee9-47e7583b6613\",\r\n  \"name\": \"Product_1\",\r\n  \"description\": \"Test\",\r\n  \"unitPrice\": 10,\r\n  \"categoryId\": \"category:15047c4f-cd35-4c05-8136-c7d9f4431e98\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7099/api/Product/product:692bc169-380e-4217-aee9-47e7583b6613",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Product",
+								"product:692bc169-380e-4217-aee9-47e7583b6613"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7099/api/Product/product:e8ddef56-0a31-4e90-9a48-7e45109231e9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7099",
+							"path": [
+								"api",
+								"Product",
+								"product:e8ddef56-0a31-4e90-9a48-7e45109231e9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

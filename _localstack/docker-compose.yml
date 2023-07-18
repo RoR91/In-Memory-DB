@@ -1,0 +1,15 @@
+version: '3.8'
+name: redis-stack
+services:
+  redis-stack:
+    container_name: redis-stack
+    image: redis/redis-stack:latest
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+
+volumes:
+  redis-data:
+    external: true
